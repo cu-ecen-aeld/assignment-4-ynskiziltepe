@@ -32,7 +32,7 @@ if [ ! -d "${OUTDIR}/linux-stable" ]; then
 	git clone ${KERNEL_REPO} --depth 1 --single-branch --branch ${KERNEL_VERSION}
 fi
 
-cp ${CALLING_DIR}/../yylloc.patch /tmp/aeld/linux-stable/
+cp ${CALLING_DIR}/../yylloc.patch ${OUTDIR}/linux-stable/
 
 
 if [ ! -e ${OUTDIR}/linux-stable/arch/${ARCH}/boot/Image ]; then
